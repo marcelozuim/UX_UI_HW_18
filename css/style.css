@@ -2,9 +2,7 @@ body{
     background-color:#F1FAFF;
     
 }
-ul{
-    columns: 2;
-}
+
 .navigation_name{
     font-family: 'Capriola', sans-serif;
     font-size: 32px;
@@ -20,7 +18,7 @@ ul{
     
     
 }
-.navigation,.navigation_contact,.footer,.footer_contact{
+.navigation,.navigation_contact,.footer{
     color: black;
     font-family:'Raleway', sans-serif;
     font-weight: bold;
@@ -110,7 +108,10 @@ padding:10px;
 }
 .footer{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+     
 }
 
 .footer_logo{
@@ -118,3 +119,129 @@ padding:10px;
     bottom: 0px;
     left: 50%;
 }
+.elements_footer{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    bottom: 0px;
+
+}
+
+
+/* HW 18 */
+.flexContainer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    
+}
+.flexChildren{
+    width: 20%;
+    height: 20%;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+.mySkills, .myWork{
+    text-align: center;
+}
+
+.workGrid{
+    display: grid;
+    row-gap: 50px;
+    align-content: center;
+    padding: 10px;
+    margin: 10px;
+    grid-template-columns: 50%, 50%;
+    grid-template-rows: 50%, 50%;
+    grid-template-areas:
+  "gridImage1 gridText1"
+  "gridImage2 gridText2";
+  
+    
+}
+
+.gridImage1{
+    background: rgba(255, 227, 202, 0.7);
+    border-radius: 8px 0px 0px 8px;
+    
+    
+}
+.gridText1{
+    background-color: rgba(255, 227, 202, 0.3);
+    border-radius: 0px 8px 8px 0px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+
+}
+
+.gridImage2{
+    background: rgba(222, 244, 242, 0.7);
+    border-radius: 8px 0px 0px 8px;
+}
+.gridText2{
+    background: rgba(222, 244, 242, 0.3);
+    border-radius: 0px 8px 8px 0px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+}
+button{
+    border: 2px solid #486E82;
+    background:none;
+    color: black;
+    font-family:'Raleway', sans-serif;
+    border-radius:40px;
+    background-color:rgba(222, 244, 242, 0.6);
+}
+button:hover{
+    border: 3px solid #486E82;
+}
+button:active{
+    border: 4px solid #486E82;
+
+}
+.gridImage1:hover{
+    transform: scale(1.1);
+}
+.gridImage2:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px){
+   
+    .workGrid{
+        width: 95%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "gridImage1"
+         "gridText1"
+        "gridImage2"
+         "gridText2";
+        align-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+       
+
+    }   
+}
+
+
+
